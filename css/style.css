@@ -1,0 +1,26 @@
+
+html {
+    /*white-space: pre-line; */
+    padding-left: 20%;
+    padding-right: 20%;
+}
+body {
+    background-color: darkslategray;
+    color: wheat;
+    margin-left: center;
+    margin-right: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-size: 50px;
+}
+h3 {
+    font-size: 20px;
+}
+a:link{
+    color : lightgoldenrodyellow;
+}
+a:visited {
+    color : goldenrod;
+}
