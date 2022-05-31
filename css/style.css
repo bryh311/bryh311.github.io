@@ -18,6 +18,11 @@ h1 {
 h3 {
     font-size: 20px;
 }
+/* for equations */
+h5 {
+    font-size: 20px;
+    font-style: italic;
+}
 a:link{
     color : lightgoldenrodyellow;
 }
