@@ -12,6 +12,9 @@ body {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+small {
+    font-size: 10px;
+}
 h1 {
     font-size: 50px;
 }
