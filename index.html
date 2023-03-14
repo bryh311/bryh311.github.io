@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bryce's Site</title>
-        <link rel="stylesheet" href="css/style.css">
-        <meta charset="UTF-8" lang="en">
+        <title>My Site</title>
+        <link rel="stylesheet" href="src/css/frontpage.css">
+        <script src="src/js/frontpage.js" defer init></script>
     </head>
     <body>
-        <h1>Bryce's Site</h1>
-        <h2>About</h2>
-        <p>
-            This is my site. It is the first website that I have
-            designed. I know very little about html and css. Hopefully this
-            site serves as some sort of oddity for whoever is reading it
-            I hope that you find it as amusing as I do. It's certainly 
-            better to have a site than to not have a site. It's like 
-            social media but way cooler because I can control exactly how
-            everything on the site looks. I don't have anything implemented with 
-            Javascript yet. Maybe I'll add some scripts later.
-        </p>
-        <img src = "images/pfp.jpg"
-            width = "300"
-            height = "300">
-        <p>I am a student at Purdue University</p>
-        <h4>Links</h4>
-        <p>
-            <a href="images/pfp.jpg">Picture</a><br>
-            <a href="games/index.html">Games</a><br>
-            <a href="blog/index.html">Blog</a><br>
-            <a href="https://bryh311.github.io/Random-Walk-Visualization/">Random Walk Simulation</a>
-        </p>
+        <!-- <img class="background-img" src="src/img/bryce_canyon.jpg"> -->
+        <h1 class="title" >Bryce's Site</h1>
+        <div class="main">
+            <div class="intro-div">
+                <div class="images">
+                    <img class="title-image" src="src/img/frontpage_rotation/denmark-1.png">
+                    <img class="title-image" src="src/img/frontpage_rotation/denmark-2.png">
+                    <img class="title-image" src="src/img/frontpage_rotation/hawaii-1.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/hawaii-2.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/hawaii-3.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/hawaii-4.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/hawaii-5.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/utah-1.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/utah-2.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/utah-3.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/maine-1.jpg">
+                    <img class="title-image" src="src/img/frontpage_rotation/nm-1.jpg">
+                </div>
+                <p class="bio-text">This is my website, with marginally improved CSS!</p>
+            </div>
+            <div class="links-div">
+                <h1 ><a class="frontpage-link" href="./blog/index.html">Blog</a></h1>
+                <h1 ><a class="frontpage-link" href="projects.html">Projects</a></h1>
+                <h1 ><a class="frontpage-link" href="Hill_BryceResume.pdf">Resume</a></h1>
+                <h1 ><a class="frontpage-link" href="about.html">About</a></h1>
+            </div>
+        </div>
+        <p class="footer-text"><small>Bryce's site ©2022-2023 Bryce Hill</small></p>
     </body>
 </html>

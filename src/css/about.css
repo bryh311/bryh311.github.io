@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: wheat;
+    background-color: darkslategray;
+    font-family: 'EB Garamond', serif;
+    background-image: url("../img/bryce_canyon.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: 1500px;
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: darkslategray;
+    overflow: auto;
+}
+.nav-bar > a {
+    float: left;
+    padding: 12px;
+    color: wheat;
+    text-decoration: none;
+    font-size: 20px;
+    width: 23.25%;
+    text-align: center;
+}
+
+.intro-div {
+    padding-top: 10px;
+}
+
+.personal-picture {
+    width: 300px;
+    height: auto;
+    border: 3px solid wheat;
+    border-radius: 50%;
+
+}
+
+.nav-bar a:hover {
+    background-color: wheat;
+    color: darkslategray;
+}
+
+.nav-bar a:visited {
+    text-decoration: none;
+}
+
+.about-text {
+    width: 500px;
+}
+
+.about-text h1 {
+    text-align: center;
+}

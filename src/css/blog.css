@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: wheat;
+    background-color: darkslategray;
+    font-family: 'EB Garamond', serif;
+    background-image: url("../img/bryce_canyon.jpg");
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: 1500px;
+}
+
+.nav-bar {
+    width: 100%;
+    background-color: darkslategray;
+    overflow: auto;
+}
+.nav-bar > a {
+    float: left;
+    padding: 12px;
+    color: wheat;
+    text-decoration: none;
+    font-size: 20px;
+    width: 23.25%;
+    text-align: center;
+}
+
+.nav-bar a:hover {
+    background-color: wheat;
+    color: darkslategray;
+}
+
+.nav-bar a:visited {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 400%;
+}
+
+.blog-links > h1 > a {
+    color: wheat;
+    text-decoration: none;
+    opacity: 0.6;
+    font-size: 75%;
+    transition: 0.5s;
+}
+.blog-links > h1 > a:hover {
+    opacity: 1;
+    font-size: 100%;
+}
+
+.blog-links > h1 > a:visited {
+    text-decoration: none;
+}
+
+.article {
+    padding-top: 50px;
+    width: 600px;
+}
+
+.article > h3 {
+    font-size: 130%;
+}
+
+.article > p > a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 110%;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.article > p > a:hover {
+    opacity: 1;
+    font-size: 150%;
+}
+
+.article > p > a:visited {
+    text-decoration: none;
+    opacity: 1;
+}
