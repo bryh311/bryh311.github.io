@@ -1,0 +1,43 @@
+baseURL = 'https://bryh311.github.io/'
+languageCode = 'en-us'
+title = "Bryce's site"
+theme = 'archie'
+
+[params]
+    mode = "light"
+    mathjax = true
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/bryh311"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://x.com/BHill38821"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "All posts"
+url = "/posts"
+weight = 2
+
+[[menu.main]]
+name = "Resume"
+url = "/resume.pdf"
+weight = 3
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 4
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 5
