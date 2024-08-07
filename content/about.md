@@ -11,7 +11,7 @@ I'm interested in several areas of computer science, like programming languages,
 databases, and software engineering. 
 
 
-I'm was employed this summer as a process control intern at Cleveland-Cliffs working in the .NET
+I was employed this summer as a process control intern at Cleveland-Cliffs working in the .NET
 and windows ecosystems, and I used to be a teaching assistant for both a C programming
 and discrete mathematics.
 
