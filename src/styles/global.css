@@ -1,0 +1,39 @@
+:root {
+  /* default light theme */
+  --background-color: #F9F5F0;
+  --foreground-color: #F2EAD3;
+  --accent-color-primary: #F4991A;
+  --accent-color-secondary: #344F1F;
+  --text-color: #1F334D;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+}
+
+html[data-theme="light"] {
+  --background-color: #F9F5F0;
+  --foreground-color: #F2EAD3;
+  --accent-color-primary: #F4991A;
+  --accent-color-secondary: #344F1F;
+  --text-color: #1F334D;
+}
+
+a {
+  text-decoration: unset;
+  text-decoration: underline dashed;
+  color: var(--text-color);
+  transition: color 0.1s ease-out;
+
+}
+
+a:hover {
+  color: var(--accent-color-primary);
+}

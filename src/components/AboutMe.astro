@@ -1,0 +1,88 @@
+---
+import '@styles/global.css'
+import { Image } from 'astro:assets'
+import myImage from '../assets/me.jpg';
+import Links from './Links.astro';
+
+
+---
+<style>
+  .aboutme-text {
+    width: fit-content;
+    height: fit-content;
+    padding: 2rem;
+    border-color: var(--accent-color-secondary);
+    border-width: 2px;
+    border-style: solid;
+    background-color: var(--foreground-color);
+    margin: 3rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+
+  .aboutme-image {
+    border-color: var(--accent-color-primary);
+    border-style: solid;
+    border-width: 2px;
+    width: fit-content;
+    height: auto;
+  }
+
+  @media (width < 900px) {
+    .aboutme {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  /* @media (width > 900px) {
+    .aboutme {
+      display: block;
+      margin: 2rem;
+    }
+
+    .aboutme-text {
+      position: absolute;
+      top: 400px;
+      left: 100px;
+      width: 500px;
+    }
+
+    .aboutme-image {
+      position: absolute;
+    } 
+  } */
+</style>
+<div class="aboutme">
+  {/*<Image src={myImage} alt="an image of me" layout="fixed" height={600} class="aboutme-image"/> */}
+  
+
+  <div class="aboutme-text">
+    <h1>Bryce Hill</h1>
+
+    <p>
+      I was an intern at <a title="Not the Fortnite people!" href="https://www.epic.com">Epic</a> this summer, working 
+      with .NET and React on insurance related applications in <a href="https://www.mychart.org">MyChart</a>. 
+
+    </p>
+
+    <p>
+      I am currently studying Computer Science at Purdue University, focusing on distributed systems and networking. 
+      I'm interested in cloud and infrastructure, and I am currently working towards getting various Azure certifications.
+    </p>
+
+    <p>
+      Outside of work I enjoy listening/making music, lifting heavy objects,
+      and reading.
+    </p>
+
+    <Links />
+  </div>
+</div>
