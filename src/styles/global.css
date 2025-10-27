@@ -37,3 +37,12 @@ a {
 a:hover {
   color: var(--accent-color-primary);
 }
+
+p {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+}

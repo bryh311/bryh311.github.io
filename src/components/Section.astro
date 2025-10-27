@@ -1,0 +1,40 @@
+---
+import "@styles/global.css";
+interface Props {
+  backgroundStyle: "background"|"foreground";
+  borderColor?: "primary"|"secondary";
+};
+
+const {backgroundStyle, borderColor} = Astro.props;
+const borderStyle = borderColor ? `${borderColor}-border` : "";
+---
+<style>
+div {
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.background {
+  background-color: var(--background-color);
+}
+
+.foreground {
+  background-color: var(--foreground-color);
+}
+
+.primary-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--accent-color-primary);
+}
+
+.secondary-border {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--accent-color-secondary);
+}
+
+</style>
+<div class={`${backgroundStyle} ${borderStyle}`}>
+  <slot />
+</div>
