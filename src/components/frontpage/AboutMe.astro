@@ -5,11 +5,7 @@ import Section from '@components/Section.astro';
 import {Content as AboutMeContent} from './content/about-me.md';
 
 ---
-<div class="aboutme">
-  {/*<Image src={myImage} alt="an image of me" layout="fixed" height={600} class="aboutme-image"/> */}
-
-  <Section backgroundStyle="foreground" borderColor="secondary">
-    <AboutMeContent />
-    <Links />
-  </Section>
-</div>
+<Section backgroundStyle="foreground" borderColor="secondary">
+  <AboutMeContent />
+  <Links />
+</Section>

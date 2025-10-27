@@ -1,6 +1,8 @@
 ---
 import AboutMe from '@components/frontpage/AboutMe.astro';
 import Experience from '@components/frontpage/Experience.astro';
+import Projects from '@components/frontpage/Projects.astro';
+import Navigation from '@components/Navigation.astro';
 import Layout from '@layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -15,7 +17,9 @@ import Layout from '@layouts/Layout.astro';
 
 <Layout>
 	<div class="homepage-layout">
+		<Navigation />
 		<AboutMe />
 		<Experience />
+		<Projects />
 	</div>
 </Layout>
