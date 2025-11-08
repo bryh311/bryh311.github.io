@@ -1,0 +1,26 @@
+---
+interface NavLink {
+  text: string;
+  link: string;
+}
+
+
+const internalLinks: NavLink[] = [
+  {
+    text: "Home",
+    link: "/"
+  },
+  {
+    text: "Resume",
+    link: "/resume"
+  }
+];
+---
+<style>
+  
+</style>
+<div>
+  <ul>
+    {internalLinks.map(link => <li><a href={link.link}>{link.text}</a></li>)}
+  </ul>
+</div>
