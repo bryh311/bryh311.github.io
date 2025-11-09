@@ -1,14 +1,18 @@
 ---
 import Navigation from "@components/Navigation.astro";
 import Layout from "@layouts/Layout.astro";
+import NavbarLayout from "@layouts/NavbarLayout.astro";
 ---
 <style>
-  embed {
+  object {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 4 / 3;
   }
 </style>
-<Layout pageTitle="Resume">
-  <Navigation />
-  <embed src="/public/resume.pdf"/>
-</Layout>
+<NavbarLayout pageTitle="Resume">
+  <div class="resume-layout">
+    <h1>Resume</h1>
+    <object data="/public/resume.pdf" type="application/pdf">
+    </object>
+  </div>
+</NavbarLayout>

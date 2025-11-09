@@ -1,0 +1,16 @@
+---
+import Navigation from '@components/Navigation.astro';
+import Layout from './Layout.astro';
+
+interface Props {
+  pageTitle?: string;
+}
+
+const {pageTitle} = Astro.props;
+---
+<style>
+</style>
+<Layout pageTitle={pageTitle}>
+  <Navigation />
+  <slot />
+</Layout>
