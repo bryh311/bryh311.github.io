@@ -43,7 +43,7 @@ const internalLinks: NavLink[] = [
     display: inline-block; 
   }
 
-  a {
+  .navbar-link {
     all: unset;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -52,15 +52,17 @@ const internalLinks: NavLink[] = [
     border-style: solid;
     border-color: var(--accent-color-secondary);
     border-width: 2px;
+    color: var(--accent-color-secondary);
   }
 
-  a:hover {
+  .navbar-link:hover {
     border-color: var(--accent-color-primary);
+    color: var(--accent-color-primary);
   }
 
 </style>
 <nav class="navbar">
   <ul>
-    {internalLinks.map(link => <li><a href={link.link}>{link.text}</a></li>)}
+    {internalLinks.map(link => <li><a class="navbar-link" href={link.link}>{link.text}</a></li>)}
   </ul>
 </nav>
