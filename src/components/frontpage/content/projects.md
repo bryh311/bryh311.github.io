@@ -4,7 +4,7 @@ this list with projects that I have worked on.
 
 ### Reinforcement learning for 2 Phase Commit - Python, TensorFlow, Z3
 This project was done for my distributed systems class. I worked on this project with David Helsel (who doesn't have his own website 
-currently). We recreated the results of the following paper: <https://mlforsystems.org/assets/papers/neurips2023/paper9.pdf> The github repo is private but can be provided on request. This project involved building a model in tensorflow and using tf-agents to write an agent utilizing Deep Q-Learning to learn the stages of the 2 phase commit protocol. We formalized 2 Phase Commit as statements in predicate logic in Z3 and tested the model against that to ensure
+currently). We recreated the results of the  paper: [Learning Distributed Protocols with Zero Knowledge](https://mlforsystems.org/assets/papers/neurips2023/paper9.pdf). The github repo is private but can be provided on request. This project involved building a model in tensorflow and using tf-agents to write an agent utilizing Deep Q-Learning to learn the stages of the 2 phase commit protocol. We formalized 2 Phase Commit as statements in predicate logic in Z3 and tested the model against that to ensure
 correctness.
 
 ### CS 505 Paxos Project - Java
