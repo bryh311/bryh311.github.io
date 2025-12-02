@@ -1,2 +1,2 @@
-# Astro Starter Kit: Basics
-My Personal Website
+# My personal website
+This is my personal website!
