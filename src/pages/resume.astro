@@ -1,6 +1,4 @@
 ---
-import Navigation from "@components/Navigation.astro";
-import Layout from "@layouts/Layout.astro";
 import NavbarLayout from "@layouts/NavbarLayout.astro";
 ---
 <style>
@@ -20,8 +18,8 @@ import NavbarLayout from "@layouts/NavbarLayout.astro";
 </style>
 <NavbarLayout pageTitle="Resume">
   <div class="resume-layout">
-    <h1>Resume</h1>
-    <object data="/resume.pdf" type="application/pdf">
+    <h1 id="resume-label">Resume</h1>
+    <object data="/resume.pdf" type="application/pdf" aria-label="resume" title="resume" aria-labelledby="resume-label">
     </object>
   </div>
 </NavbarLayout>
