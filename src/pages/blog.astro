@@ -1,0 +1,27 @@
+---
+import Post from "@components/blog/Post.astro";
+import NavbarLayout from "@layouts/NavbarLayout.astro";
+
+const posts = Object.values(import.meta.glob("./posts/*.md", {eager: true}));
+const orderedByDate = posts.sort((post1:any, post2:any) => {
+    const post1Date = new Date(post1.frontmatter.date);
+    const post2Date = new Date(post2.frontmatter.date);
+    return post1Date < post2Date ? 1 : -1;
+})
+---
+<style>
+    .blog-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+
+<NavbarLayout pageTitle="Blog">
+    <div class="blog-content">
+        <h1>Blog</h1>
+        <ul>
+            {orderedByDate.map((post: any) => <Post url={post.url} title={post.frontmatter.title} date={post.frontmatter.date} />)}
+        </ul>
+    </div>
+</NavbarLayout>
