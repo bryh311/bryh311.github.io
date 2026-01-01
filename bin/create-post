@@ -1,0 +1,30 @@
+#!/usr/bin/python3
+import argparse
+import os
+from datetime import date
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--title", help="title of the post")
+parser.add_argument("--tags", help="tags of the post", nargs="*")
+args = parser.parse_args()
+
+posts_root = "./src/pages/posts/"
+default_layout = "../../layouts/BlogPostLayout.astro"
+today = date.today().strftime("%Y-%m-%d")
+
+def create_title_filename(title: str) -> str:
+    path = title.lower()
+    path = title.replace(" ", "-")
+    path += ".md"
+    path = os.path.join(posts_root, path)
+    return path
+
+file_name = create_title_filename(args.title)
+with open(file_name, "w+") as f:
+    # frontmatter
+    f.write("---\n")
+    f.write(f"title: {args.title}\n")
+    f.write(f"layout: {default_layout}\n")
+    f.write(f"date: {today}\n")
+    f.write(f"tags: {args.tags}\n")
+    f.write("---\n")

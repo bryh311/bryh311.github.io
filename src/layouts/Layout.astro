@@ -12,7 +12,7 @@ const {pageTitle} = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Bryce Hill {pageTitle && `- ${pageTitle}`}</title>
+		<title>{pageTitle && `${pageTitle} -`} Bryce Hill</title>
 	</head>
 	<body>
 		<slot />

@@ -1,0 +1,30 @@
+---
+import NavbarLayout from "./NavbarLayout.astro";
+---
+<style>
+    .article-align {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-article {
+        width: 100%;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .blog-article {
+            width: 66.67%;
+            margin-left: 2rem;
+        }
+    }
+</style>
+<NavbarLayout>
+    <div class="article-align">
+        <div class="blog-article">
+            <slot/>
+        </div>
+    </div>
+</NavbarLayout>
