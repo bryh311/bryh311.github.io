@@ -8,7 +8,7 @@ interface Props {
 
 const {key, posts} = Astro.props;
 ---
-<h3>{key}</h3>
+<h3>{`${key} - (${posts.length})`}</h3>
 <ul>
     {
         posts.map((post: any) => (

@@ -49,7 +49,7 @@ const orderedKeys = postsByTag.keys().toArray().sort((s1, s2) => {
   <div class="blog-content">
     <div>
       <h1>Blog</h1>
-      <h2>All posts</h2>
+      <h2>All posts - {`(${orderedByDate.length})`}</h2>
       <ul>
         {
           orderedByDate.length != 0 ? (
