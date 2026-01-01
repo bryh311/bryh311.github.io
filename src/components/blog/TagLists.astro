@@ -1,0 +1,22 @@
+---
+import { orderPostArrayByDate } from '@utils/order-post-array-by-date';
+import TagList from './TagList.astro';
+
+interface Props {
+    postsByTag: Map<string, any[]>
+}
+
+const {postsByTag} = Astro.props;
+const orderedKeys = postsByTag.keys().toArray().sort((s1, s2) => {
+  return s1 < s2 ? 1 : -1;
+})
+---
+<h2>Tags</h2>
+{orderedKeys.map((key) => {
+    const posts = postsByTag.get(key);
+    if (posts === undefined || posts.length == 0) {
+      return;
+    }
+    const orderedPosts = orderPostArrayByDate(posts);
+    return (<TagList key={key} posts={orderedPosts} />)
+})}

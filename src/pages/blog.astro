@@ -1,27 +1,71 @@
 ---
 import Post from "@components/blog/Post.astro";
+import TagLists from "@components/blog/TagLists.astro";
 import NavbarLayout from "@layouts/NavbarLayout.astro";
+import { orderPostArrayByDate } from "@utils/order-post-array-by-date";
 
-const posts = Object.values(import.meta.glob("./posts/*.md", {eager: true}));
-const orderedByDate = posts.sort((post1:any, post2:any) => {
-    const post1Date = new Date(post1.frontmatter.date);
-    const post2Date = new Date(post2.frontmatter.date);
-    return post1Date < post2Date ? 1 : -1;
-})
----
-<style>
-    .blog-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+const posts: any[] = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true })
+);
+
+
+
+const orderedByDate = orderPostArrayByDate(posts);
+
+const postsByTag = new Map<string, any[]>();
+
+for (const post of posts) {
+  const tags: string[] = post.frontmatter.tags;
+  if (tags === undefined) {
+    console.log(`no tags for ${post.frontmatter.title}`);
+    continue;
+  }
+
+  for (const tag of tags) {
+    if (!postsByTag.has(tag)) {
+      postsByTag.set(tag, new Array());
     }
+
+    postsByTag.get(tag)?.push(post);
+  }
+}
+
+
+const orderedKeys = postsByTag.keys().toArray().sort((s1, s2) => {
+  return s1 < s2 ? 1 : -1;
+})
+
+---
+
+<style>
+  .blog-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
 
 <NavbarLayout pageTitle="Blog">
-    <div class="blog-content">
-        <h1>Blog</h1>
-        <ul>
-            {orderedByDate.map((post: any) => <Post url={post.url} title={post.frontmatter.title} date={post.frontmatter.date} />)}
-        </ul>
+  <div class="blog-content">
+    <div>
+      <h1>Blog</h1>
+      <h2>All posts</h2>
+      <ul>
+        {
+          orderedByDate.length != 0 ? (
+            orderedByDate.map((post: any) => (
+              <Post
+                url={post.url}
+                title={post.frontmatter.title}
+                date={post.frontmatter.date}
+              />
+            ))
+          ) : (
+            <p>No blog posts yet...</p>
+          )
+        }
+      </ul>
+      {postsByTag.size > 0 && <TagLists postsByTag={postsByTag} />}
     </div>
+  </div>
 </NavbarLayout>
